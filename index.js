@@ -1,5 +1,9 @@
 function isPalindrome(word) {
   // Write your algorithm here
+  let txt = /[\W_]/g
+  let lastString = word.toLowerCase().replace(txt, '');
+  let reverseString = lastString.split('').reverse().join(''); 
+  return reverseString === lastString
 }
 
 /* 
@@ -8,6 +12,8 @@ function isPalindrome(word) {
 
 /*
   Add written explanation of your solution here
+  we need to match our text globally with regular expression.
+  we need to parse our words to lowercase and replace the text with and empty string. 
 */
 
 // You can run `node index.js` to view these console logs
